@@ -118,14 +118,35 @@ a:hover
   	text-decoration: underline;
 }
 
+/* Red/Yellow/Green tables */
+.passage table 
+{
+  	border-collapse: separate;
+}
+table 
+{
+  	width: 100%;
+  	border-collapse: separate;
+	border-spacing: 30px;
+}
+
+/* Case Study blurb boxes */
 p.case_study
 {
 	border-style: solid;
-  	padding: 20px;
+  	padding: 30px;
 	border-radius: 25px;
-  	background: #e6f5ff;
-  	width: 500px;
+  	width: 600px;
   	text-align: center;
+  	border-color: lightgray;
+  	margin: auto;
+}
+
+/* Forward and back text/arrows */
+p.navitem 
+{
+  	text-align: center;
+  	padding: 30px;
 }
 
 #menu-item-saves {
@@ -183,9 +204,7 @@ p.case_study
 #story-caption {font-size: 90%; text-align: left;}
 #story-title {color: #0059B3; text-align: left;}
 
-table {
-  border-spacing: 5px;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Introduction" tags="" position="802,402" size="100,100">&lt;b&gt;Introduction&lt;/b&gt;
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Introduction" tags="" position="802,402" size="100,100">&lt;b&gt;Introduction&lt;/b&gt;
 &lt;img src=&quot;https://www.dropbox.com/s/7o10iln4i10uvyv/intro.svg?raw=1&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; width=&quot;100&quot;&gt; InterAct is a tool designed to help people building computer-mediated communication better understand the impacts of their design on interpersonal communication. It helps you work through principles from communication theory and gives you feedback on how each relates to the design of your product.
 
 This tool is intended to be used when designing a single communication feature (e.g., Facebook Messenger) rather than an entire product (e.g., Facebook).
@@ -209,34 +228,38 @@ Some examples:
 &lt;&lt;set $socialCues = &quot;N/A&quot;&gt;&gt;
 &lt;&lt;set $socialInteractivity = &quot;N/A&quot;&gt;&gt;
 &lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="TemporalStructure" tags="" position="801,541" size="100,100">&lt;b&gt;Temporal Structure&lt;/b&gt;
+
 &lt;img src=&quot;https://www.dropbox.com/s/wcdnrlmsu44f3h9/clock.svg?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt; Temporal structure refers to how synchronous or asynchronous the communication between users is. Synchronous communication occurs in real-time (e.g., a video call), whereas asynchronous communication involves a delay between one party’s emission and another’s reception (e.g., email when the receiver is away from their email client).
 
-&lt;p class=&quot;case_study&quot;&gt;Case Study: &lt;a href=&quot;https://www.fastcompany.com/3058066/what-is-an-appropriate-response-time-to-email&quot; target=&quot;_blank&quot;&gt;Are social expectations making email more synchronous?&lt;/a&gt;&lt;/p&gt;
 Choose the temporal structure that best describes your feature:
 &lt;ul&gt;
 &lt;li&gt;[[Synchronous][$synch = &quot;Synchronous&quot;]] (e.g., video chat)&lt;/li&gt;
 &lt;li&gt;[[Asynchronous][$synch = &quot;Asynchronous&quot;]] (e.g., texting)&lt;/li&gt;
 &lt;/ul&gt;
+[[← Introduction|Introduction]]
 
 &lt;&lt;set $setupComplete = &quot;true&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="Asynchronous" tags="" position="900,671" size="100,100">Implications for &lt;b&gt;Asynchronous&lt;/b&gt; Communication
-&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/c3lphq1491qiv41/green_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt; 
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/c3lphq1491qiv41/green_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Green Light - Benefits&quot;&gt;&lt;/td&gt; 
 &lt;td&gt;Asynchronous communication helps large groups sustain interaction. It also provides people time to manage how they would like to self-present.&lt;/td&gt;&lt;/tr&gt; 
 
-&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/trjwkn8mzkd0ddy/yellow_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt; 
+&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/trjwkn8mzkd0ddy/yellow_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Yellow Light - Caution&quot;&gt;&lt;/td&gt; 
 &lt;td&gt;Asynchronous communication allows people to place fewer demands on others’ time, but this can also lead to long/unexpected gaps in communication, or eventually no replies at all.&lt;/td&gt;&lt;/tr&gt;
 
-&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/sqpothkeau8h8co/red_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt; 
+&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/sqpothkeau8h8co/red_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Red Light - Warnings&quot;&gt;&lt;/td&gt; 
 &lt;td&gt;Shared social expectations for response speed are crucial for successful asynchronous communication. How will your users create/learn the norms for your feature?&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-[[Sounds good. Next principle!|Mobility]]</tw-passagedata><tw-passagedata pid="4" name="Synchronous" tags="" position="700,672" size="100,100">Implications for &lt;b&gt;Synchronous&lt;/b&gt; Communication
-&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/c3lphq1491qiv41/green_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Benefits&quot;&gt;&lt;/td&gt; 
+&lt;p class=&quot;case_study&quot;&gt;Case Study: &lt;a href=&quot;https://www.fastcompany.com/3058066/what-is-an-appropriate-response-time-to-email&quot; target=&quot;_blank&quot;&gt;Are social expectations making email more synchronous?&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&quot;navitem&quot;&gt;[[← Choose a different answer|TemporalStructure]]&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[[Sounds good. Next principle! →|Mobility]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="4" name="Synchronous" tags="" position="700,672" size="100,100">Implications for &lt;b&gt;Synchronous&lt;/b&gt; Communication
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/c3lphq1491qiv41/green_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Green Light - Benefits&quot;&gt;&lt;/td&gt; 
 &lt;td&gt;Tends to be more ephemeral--it is less likely to be stored or replicated. This can mean an increased feeling of privacy and intimacy for users. Synchronicity has been shown to help people feel more ‘together’ when they are apart, and can encourage playfulness.&lt;/td&gt;&lt;/tr&gt;
 
-&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/trjwkn8mzkd0ddy/yellow_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Warnings&quot;&gt;&lt;/td&gt; 
+&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/trjwkn8mzkd0ddy/yellow_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Yellow Light - Caution&quot;&gt;&lt;/td&gt; 
 &lt;td&gt;People must align their schedules to meet simultaneously. Some may also prefer the extra time to craft responses asynchronous options allow. These choices may affect accessibility. Consider (and consult!) your users to determine if you should add asynchronous functionality.&lt;/td&gt;&lt;/tr&gt;
 
-&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/sqpothkeau8h8co/red_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Challenges&quot;&gt;&lt;/td&gt; 
+&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/sqpothkeau8h8co/red_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Red Light - Warnings&quot;&gt;&lt;/td&gt; 
 &lt;td&gt;Completely synchronous communication is usually not appropriate for large groups. It can be difficult to sift through the rapid-fire succession of messages. (This is why dinner parties are usually kept small!) Also, remember that synchronous communication feels more private to users--ensure they know the actual level of privacy they have using your app.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-[[Sounds good. Next principle!|Mobility]]</tw-passagedata><tw-passagedata pid="5" name="Mobility" tags="" position="801,800" size="100,100">&lt;b&gt;Mobility&lt;/b&gt;
+&lt;p class=&quot;case_study&quot;&gt;Case Study: &lt;a href=&quot;https://www.fastcompany.com/3058066/what-is-an-appropriate-response-time-to-email&quot; target=&quot;_blank&quot;&gt;Are social expectations making email more synchronous?&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&quot;navitem&quot;&gt;[[← Choose a different answer|TemporalStructure]]&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[[Sounds good. Next principle! →|Mobility]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="5" name="Mobility" tags="" position="801,800" size="100,100">&lt;b&gt;Mobility&lt;/b&gt;
+
 &lt;img src=&quot;https://www.dropbox.com/s/n1sukhkwirjymwv/mobility2.svg?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt; Mobility refers to a technology’s physical portability. Some technologies are highly mobile (perhaps most notably the mobile/smartphone), allowing for access on-the-go. Other technologies are located and accessible at a particular physical location, and this anchoring affects usage.
 
 Choose the level of mobility that best describes your feature:
@@ -244,46 +267,57 @@ Choose the level of mobility that best describes your feature:
 &lt;li&gt;[[Highly mobile][$mobility = &quot;Highly mobile&quot;]] (e.g., tablet or cell phone app)&lt;/li&gt;
 &lt;li&gt;[[Sort of mobile][$mobility = &quot;Sort of mobile&quot;]] (e.g., an app on a laptop that requires wifi)&lt;/li&gt;
 &lt;li&gt;[[Not mobile][$mobility = &quot;Not mobile&quot;]] (e.g., desktop computer or VR headset)&lt;/li&gt;
-&lt;/ul&gt;</tw-passagedata><tw-passagedata pid="6" name="Highly mobile" tags="" position="651,950" size="100,100">Implications for &lt;b&gt;Highly Mobile&lt;/b&gt; Communication
-&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/c3lphq1491qiv41/green_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt;
+&lt;/ul&gt;
+
+[[← Back to Temporal Structure|TemporalStructure]]</tw-passagedata><tw-passagedata pid="6" name="Highly mobile" tags="" position="651,950" size="100,100">Implications for &lt;b&gt;Highly Mobile&lt;/b&gt; Communication
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/c3lphq1491qiv41/green_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Green Light - Benefits&quot;&gt;&lt;/td&gt;
 &lt;td&gt;Highly mobile products allow users to communicate when it is convenient for them, possibly increasing engagement. Users may feel safer since they can communicate with others no matter where they are. Users are also able to document and share localized activity others may not have access to, such as political protests.&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/trjwkn8mzkd0ddy/yellow_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/trjwkn8mzkd0ddy/yellow_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Yellow Light - Caution&quot;&gt;&lt;/td&gt;
 &lt;td&gt;Some worry that significant use of mobile products makes people less connected to friends and family in their physical surroundings.&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/sqpothkeau8h8co/red_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/sqpothkeau8h8co/red_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Red Light - Warnings&quot;&gt;&lt;/td&gt;
 &lt;td&gt;Users may feel pressure to respond to communication immediately, leading to stress. Consider ways to allow your users to take a break from being “always on.” Mobile products also have more privacy concerns since they may be used in public places.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-[[Okay, next question.|Reach]]</tw-passagedata><tw-passagedata pid="7" name="Sort of mobile" tags="" position="802,950" size="100,100">Implications for &lt;b&gt;Sort of Mobile&lt;/b&gt; Communication
-&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/c3lphq1491qiv41/green_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt;
+&lt;p class=&quot;case_study&quot;&gt;Case Study: &lt;a href=&quot;https://www.wired.com/2015/10/how-black-lives-matter-uses-social-media-to-fight-the-
+power/&quot; target=&quot;_blank&quot;&gt;Read more about Black Lives Matter and cell phones in the 2015 demonstrations&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&quot;case_study&quot;&gt;Case Study: &lt;a href=&quot;https://www.wired.com/story/break-your-phone-addiction-with-second-phone/&quot; target=&quot;_blank&quot;&gt;Can “minimalist phones” address the downsides of highly mobile products?&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&quot;navitem&quot;&gt;[[← Choose a different answer|Mobility]]&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[[Okay, next question. →|Reach]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="7" name="Sort of mobile" tags="" position="802,950" size="100,100">Implications for &lt;b&gt;Sort of Mobile&lt;/b&gt; Communication
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/c3lphq1491qiv41/green_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Green Light - Benefits&quot;&gt;&lt;/td&gt;
 &lt;td&gt;Highly mobile products allow users to communicate when it is convenient for them, possibly increasing engagement. Users may feel safer since they can communicate with others no matter where they are. Users are also able to document and share localized activity others may not have access to, such as political protests.&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/trjwkn8mzkd0ddy/yellow_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/trjwkn8mzkd0ddy/yellow_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Yellow Light - Caution&quot;&gt;&lt;/td&gt;
 &lt;td&gt;The more mobile a product, the more likely there are to be privacy concerns about its use in public places (e.g. videorecording strangers). How will you account for moments of ‘mixed’ mobility, like when someone takes their laptop to a park without wifi?&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/sqpothkeau8h8co/red_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/sqpothkeau8h8co/red_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Red Light - Warnings&quot;&gt;&lt;/td&gt;
 &lt;td&gt;Low mobility can present accessibility issues. For example, many people around the world can only access the internet via mobile phones.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-[[Okay, next question.|Reach]]</tw-passagedata><tw-passagedata pid="8" name="Not mobile" tags="" position="951,951" size="100,100">Implications for &lt;b&gt;Low Mobility&lt;/b&gt; Communication
-&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/c3lphq1491qiv41/green_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt;
+&lt;p class=&quot;case_study&quot;&gt;Case Study: &lt;a href=&quot;https://www.wired.com/2015/10/how-black-lives-matter-uses-social-media-to-fight-the-
+power/&quot; target=&quot;_blank&quot;&gt;Read more about Black Lives Matter and cell phones in the 2015 demonstrations&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&quot;case_study&quot;&gt;Case Study: &lt;a href=&quot;https://www.wired.com/story/break-your-phone-addiction-with-second-phone/&quot; target=&quot;_blank&quot;&gt;Can “minimalist phones” address the downsides of highly mobile products?&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&quot;navitem&quot;&gt;[[← Choose a different answer|Mobility]]&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[[Okay, next question. →|Reach]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="8" name="Not mobile" tags="" position="951,951" size="100,100">Implications for &lt;b&gt;Low Mobility&lt;/b&gt; Communication
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/c3lphq1491qiv41/green_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Green Light - Benefits&quot;&gt;&lt;/td&gt;
 &lt;td&gt;Having a dedicated location for a product means users may be more fully absorbed in their communication than they would be on a mobile product. There is also less stress regarding the expectation to reply immediately to messages, since others understand users are not in one location at all times. &lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/trjwkn8mzkd0ddy/yellow_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/trjwkn8mzkd0ddy/yellow_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Yellow Light - Caution&quot;&gt;&lt;/td&gt;
 &lt;td&gt;Users may not communicate as often, since the product requires being in a specific place. This is not necessarily a bad thing, since the quality of the communication may be higher.&lt;/td&gt;
 &lt;/tr&gt;
 
 &lt;tr&gt;
-&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/sqpothkeau8h8co/red_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/sqpothkeau8h8co/red_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Red Light - Warnings&quot;&gt;&lt;/td&gt;
 &lt;td&gt;Low mobility can present accessibility issues. For example, many people around the world can only access the internet via mobile phones.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-[[Okay, next question.|Reach]]</tw-passagedata><tw-passagedata pid="9" name="StorySubtitle" tags="" position="1103,402" size="100,100">InterAct is a tool to help technology designers improve interpersonal computer-mediated communication in their products. It is based on Nancy Baym&#39;s book &lt;i&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=PYE5XPKUAAI&quot;&gt;Personal Connections in the Digital Age&lt;/a&gt;&lt;/i&gt;. /*To read more about the research behind this tool, click here.*/</tw-passagedata><tw-passagedata pid="10" name="StoryBanner" tags="" position="1227,401" size="100,100"></tw-passagedata><tw-passagedata pid="11" name="StoryAuthor" tags="" position="1353,400" size="100,100">By Rachel Bergmann, Danielle Bragg, Elena Maris and Kelly Wagman</tw-passagedata><tw-passagedata pid="12" name="StoryCaption" tags="" position="1401,700" size="100,100">&lt;b&gt;Your Answers&lt;/b&gt;
+&lt;p class=&quot;case_study&quot;&gt;Case Study: &lt;a href=&quot;https://www.wired.com/2015/10/how-black-lives-matter-uses-social-media-to-fight-the-
+power/&quot; target=&quot;_blank&quot;&gt;Read more about Black Lives Matter and cell phones in the 2015 demonstrations&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&quot;case_study&quot;&gt;Case Study: &lt;a href=&quot;https://www.wired.com/story/break-your-phone-addiction-with-second-phone/&quot; target=&quot;_blank&quot;&gt;Can “minimalist phones” address the downsides of highly mobile products?&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&quot;navitem&quot;&gt;[[← Choose a different answer|Mobility]]&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[[Okay, next question. →|Reach]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="9" name="StorySubtitle" tags="" position="1103,402" size="100,100">InterAct is a tool to help technology designers improve interpersonal computer-mediated communication in their products. It is based on Nancy Baym&#39;s book &lt;i&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=PYE5XPKUAAI&quot;&gt;Personal Connections in the Digital Age&lt;/a&gt;&lt;/i&gt;. /*To read more about the research behind this tool, click here.*/</tw-passagedata><tw-passagedata pid="10" name="StoryBanner" tags="" position="1227,401" size="100,100"></tw-passagedata><tw-passagedata pid="11" name="StoryAuthor" tags="" position="1353,400" size="100,100">By Rachel Bergmann, Danielle Bragg, Elena Maris and Kelly Wagman</tw-passagedata><tw-passagedata pid="12" name="StoryCaption" tags="" position="1401,700" size="100,100">&lt;b&gt;Your Answers&lt;/b&gt;
 &lt;img src=&quot;https://www.dropbox.com/s/7o10iln4i10uvyv/intro.svg?raw=1&quot; width=&quot;20&quot;&gt; [[Introduction]]
 &lt;img src=&quot;https://www.dropbox.com/s/wcdnrlmsu44f3h9/clock.svg?raw=1&quot; width=&quot;20&quot;&gt; [[Temporal structure|TemporalStructure]]: &lt;&lt;print $synch&gt;&gt;
 &lt;img src=&quot;https://www.dropbox.com/s/n1sukhkwirjymwv/mobility2.svg?raw=1&quot; width=&quot;20&quot;&gt; [[Mobility]]: &lt;&lt;print $mobility&gt;&gt;
@@ -293,6 +327,7 @@ Choose the level of mobility that best describes your feature:
 &lt;img src=&quot;https://www.dropbox.com/s/hvgg4lbt68zh1ez/social_cues.svg?raw=1&quot; width=&quot;20&quot;&gt; [[Social cues|SocialCues]]: &lt;&lt;print $socialCues&gt;&gt;
 &lt;img src=&quot;https://www.dropbox.com/s/7sxxxxgl1x8bqxd/light_bulb.svg?raw=1&quot; width=&quot;20&quot;&gt; [[Conclusion]]
 /*&lt;img src=&quot;https://www.dropbox.com/s/ffd1ylgil581s2n/interactivity.svg?raw=1&quot; width=&quot;20&quot;&gt; [[Social interactivity|SocialInteractivity]]: &lt;&lt;print $socialInteractivity&gt;&gt;*/</tw-passagedata><tw-passagedata pid="13" name="Reach" tags="" position="801,1100" size="100,100">&lt;b&gt;Reach&lt;/b&gt;
+
 &lt;img src=&quot;https://www.dropbox.com/s/d0tade4nj8d8161/reach.svg?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt; Reach refers to the audience size available to a user through a particular technology. Systems with large reach allow one user to contact many others, while systems with small reach tend to support one-on-one communication or small group connections.
 
 Choose the audience size your feature allows for:
@@ -300,38 +335,44 @@ Choose the audience size your feature allows for:
 &lt;li&gt;[[One-to-one communication][$reach = &quot;One-to-one&quot;]] (e.g., texting)&lt;/li&gt;
 &lt;li&gt;[[Small groups][$reach = &quot;Small groups&quot;]] (e.g., Slack channels)&lt;/li&gt;
 &lt;li&gt;[[Public to anyone][$reach = &quot;Public&quot;]] (e.g., public Instagram posts)&lt;/li&gt;
-&lt;/ul&gt;</tw-passagedata><tw-passagedata pid="14" name="One-to-one communication" tags="" position="650,1251" size="100,100">Implications for Communicating &lt;b&gt;One-to-One&lt;/b&gt;
-&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/c3lphq1491qiv41/green_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt;
+&lt;/ul&gt;
+
+[[← Back to Mobility|Mobility]]</tw-passagedata><tw-passagedata pid="14" name="One-to-one communication" tags="" position="650,1251" size="100,100">Implications for Communicating &lt;b&gt;One-to-One&lt;/b&gt;
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/c3lphq1491qiv41/green_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Green Light - Benefits&quot;&gt;&lt;/td&gt;
 &lt;td&gt;Communication can feel intimate and users may share more freely.&lt;/td&gt;
 &lt;/tr&gt;
 
 /*&lt;tr&gt;
-&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/trjwkn8mzkd0ddy/yellow_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/trjwkn8mzkd0ddy/yellow_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Yellow Light - Caution&quot;&gt;&lt;/td&gt;
 &lt;td&gt;N/A&lt;/td&gt;
 &lt;/tr&gt;*/
 &lt;tr&gt;
-&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/sqpothkeau8h8co/red_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/sqpothkeau8h8co/red_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Red Light - Warnings&quot;&gt;&lt;/td&gt;
 &lt;td&gt;Users are limited in the extent to which their messages can be ‘heard.’ Communication norms may not be well-developed. 
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-[[Interesting! What&#39;s next?|Storage]]</tw-passagedata><tw-passagedata pid="15" name="Small groups" tags="" position="800,1251" size="100,100">Implications for Communicating in &lt;b&gt;Small Groups&lt;/b&gt;
-&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/c3lphq1491qiv41/green_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt; 
+&lt;p class=&quot;case_study&quot;&gt;Case Study: &lt;a href=&quot;https://hbr.org/2020/02/the-era-of-antisocial-social-media&quot; target=&quot;_blank&quot;&gt;Read about “antisocial social media” and why some people are opting for smaller, more private social networking sites with smaller reach.&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&quot;navitem&quot;&gt;[[← Choose a different answer|Reach]]&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[[Interesting! What&#39;s next? →|Storage]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="15" name="Small groups" tags="" position="800,1251" size="100,100">Implications for Communicating in &lt;b&gt;Small Groups&lt;/b&gt;
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/c3lphq1491qiv41/green_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Green Light - Benefits&quot;&gt;&lt;/td&gt; 
 &lt;td&gt;Digital media can facilitate the sharing of messages locally &lt;i&gt;and&lt;/i&gt; globally. This can subvert the power of established media organizations and allow for the creation of relationships and communities across geographic boundaries.&lt;/td&gt;&lt;/tr&gt;
 
-&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/trjwkn8mzkd0ddy/yellow_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt; 
+&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/trjwkn8mzkd0ddy/yellow_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Yellow Light - Caution&quot;&gt;&lt;/td&gt; 
 &lt;td&gt;Wide reach means that users’ varied contexts are more likely to collide. This can enhance user experiences but can also lead to confusion over appropriate communication behaviors and norms. How will you facilitate safe and respectful communication within large groups spread over numerous cultures and contexts?&lt;/td&gt;&lt;/tr&gt;
 
-&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/sqpothkeau8h8co/red_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt; 
+&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/sqpothkeau8h8co/red_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Red Light - Warnings&quot;&gt;&lt;/td&gt; 
 &lt;td&gt;Communication that travels widely can also result in user concerns over privacy, including reticence to share or engage fully. How will you protect user privacy when their messages have wide reach?&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-[[Interesting! What&#39;s next?|Storage]]</tw-passagedata><tw-passagedata pid="16" name="Public to anyone" tags="" position="950,1251" size="100,100">Implications for &lt;b&gt;Public&lt;/b&gt; Communication
-&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/c3lphq1491qiv41/green_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt;
+&lt;p class=&quot;case_study&quot;&gt;Case Study: &lt;a href=&quot;https://hbr.org/2020/02/the-era-of-antisocial-social-media&quot; target=&quot;_blank&quot;&gt;Read about “antisocial social media” and why some people are opting for smaller, more private social networking sites with smaller reach.&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&quot;navitem&quot;&gt;[[← Choose a different answer|Reach]]&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[[Interesting! What&#39;s next? →|Storage]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="16" name="Public to anyone" tags="" position="950,1251" size="100,100">Implications for &lt;b&gt;Public&lt;/b&gt; Communication
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/c3lphq1491qiv41/green_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Green Light - Benefits&quot;&gt;&lt;/td&gt;
 &lt;td&gt;Digital media can facilitate the sharing of messages locally &lt;i&gt;and&lt;/i&gt; globally. This can subvert the power of established media organizations and allow for the creation of relationships and communities across geographic boundaries.&lt;/td&gt;&lt;/tr&gt;
 
-&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/trjwkn8mzkd0ddy/yellow_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt;
+&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/trjwkn8mzkd0ddy/yellow_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Yellow Light - Caution&quot;&gt;&lt;/td&gt;
 &lt;td&gt;Wide reach means that users’ varied contexts are more likely to collide. This can enhance user experiences but can also lead to confusion over appropriate communication behaviors and norms. How will you facilitate safe and respectful communication within large groups spread over numerous cultures and contexts?&lt;/td&gt;&lt;/tr&gt;
 
-&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/sqpothkeau8h8co/red_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt; 
+&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/sqpothkeau8h8co/red_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Red Light - Warnings&quot;&gt;&lt;/td&gt; 
 &lt;td&gt;Communication that travels widely can also result in user concerns over privacy, including reticence to share or engage fully. How will you protect user privacy when their messages have wide reach?&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-[[Interesting! What&#39;s next?|Storage]]</tw-passagedata><tw-passagedata pid="17" name="Storage" tags="" position="801,1402" size="100,100">&lt;b&gt;Storage&lt;/b&gt;
+&lt;p class=&quot;case_study&quot;&gt;Case Study: &lt;a href=&quot;https://hbr.org/2020/02/the-era-of-antisocial-social-media&quot; target=&quot;_blank&quot;&gt;Read about “antisocial social media” and why some people are opting for smaller, more private social networking sites with smaller reach.&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&quot;navitem&quot;&gt;[[← Choose a different answer|Reach]]&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[[Interesting! What&#39;s next? →|Storage]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="17" name="Storage" tags="" position="801,1402" size="100,100">&lt;b&gt;Storage&lt;/b&gt;
+
 &lt;img src=&quot;https://www.dropbox.com/s/cpw3d2jt7us3opi/storage.svg?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt; Storage refers to the recording and maintenance of communication, including messages, text, or other data, over time. Design decisions about whether data is stored, if so which parts, for how long, where, and how can greatly impact a system’s usage. Storage is closely linked to the subsequent principal of replicability, by its effect on how long data is available for copying. Ephemeral data, which is available briefly, is difficult for users to replicate; conversely, data in long-term storage can be much easier for people to copy.
 
 How long can users see data stored in the feature?
@@ -339,31 +380,37 @@ How long can users see data stored in the feature?
 &lt;li&gt;[[Little to no][$storage = &quot;Little to no&quot;]] (e.g., Snapchat)&lt;/li&gt;
 &lt;li&gt;[[For a while, but not forever][$storage = &quot;Time-limited&quot;]] (e.g., Slack messages that dissapear after a week)&lt;/li&gt;
 &lt;li&gt;[[Persistent][$storage = &quot;Persistent&quot;]] (e.g., email)&lt;/li&gt;
-&lt;/ul&gt;</tw-passagedata><tw-passagedata pid="18" name="Little to no" tags="" position="651,1552" size="100,100">Implications for &lt;b&gt;Little to No Storage&lt;/b&gt;
-&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/c3lphq1491qiv41/green_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt; 
+&lt;/ul&gt;
+
+[[← Back to Reach|Reach]]</tw-passagedata><tw-passagedata pid="18" name="Little to no" tags="" position="651,1552" size="100,100">Implications for &lt;b&gt;Little to No Storage&lt;/b&gt;
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/c3lphq1491qiv41/green_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Green Light - Benefits&quot;&gt;&lt;/td&gt; 
 &lt;td&gt;Ephemeral messages that do not persist in storage can make users feel more secure and more willing to share and engage fully.&lt;/td&gt;&lt;/tr&gt;
 
-&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/trjwkn8mzkd0ddy/yellow_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt; 
+&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/trjwkn8mzkd0ddy/yellow_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Yellow Light - Caution&quot;&gt;&lt;/td&gt; 
 &lt;td&gt;Although messages may feel ephemeral to users, it is important to be transparent about the extent to which their messages are replicable. It is also important to make clear how other entities might access and store the data you do not.&lt;/td&gt;&lt;/tr&gt;
-/*&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/sqpothkeau8h8co/red_light.png?raw=1&quot; width=&quot;100&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; style=&quot;vertical-align:middle&quot;&gt;&lt;/td&gt; 
+/*&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/sqpothkeau8h8co/red_light.png?raw=1&quot; width=&quot;100&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; style=&quot;vertical-align:middle&quot; title=&quot;Red Light - Warnings&quot;&gt;&lt;/td&gt; 
 &lt;td&gt;N/A&lt;/td&gt;&lt;/tr&gt;*/&lt;/table&gt;
-[[Take me to the next principle.|Replicability]]</tw-passagedata><tw-passagedata pid="19" name="For a while, but not forever" tags="" position="802,1552" size="100,100">Implications for &lt;b&gt;Time-Limited Storage&lt;/b&gt;
-&lt;table&gt;/*&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/c3lphq1491qiv41/green_light.png?raw=1&quot; width=&quot;100&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; style=&quot;vertical-align:middle&quot;&gt;&lt;/td&gt; 
+&lt;p class=&quot;case_study&quot;&gt;Case Study: &lt;a href=&quot;https://www.theguardian.com/commentisfree/2018/mar/28/all-the-data-facebook-google-has-on-you-privacy&quot; target=&quot;_blank&quot;&gt;This 2018 article describes the data Google and Facebook collect from their users--not just how long they store the data, but all the different types of data too.&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&quot;navitem&quot;&gt;[[← Choose a different answer|Storage]]&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[[Take me to the next principle. →|Replicability]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="19" name="For a while, but not forever" tags="" position="802,1552" size="100,100">Implications for &lt;b&gt;Time-Limited Storage&lt;/b&gt;
+&lt;table&gt;/*&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/c3lphq1491qiv41/green_light.png?raw=1&quot; width=&quot;100&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; style=&quot;vertical-align:middle&quot; title=&quot;Green Light - Benefits&quot;&gt;&lt;/td&gt; 
 &lt;td&gt;N/A&lt;/td&gt;&lt;/tr&gt;*/
-&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/trjwkn8mzkd0ddy/yellow_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt; 
+&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/trjwkn8mzkd0ddy/yellow_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Yellow Light - Caution&quot;&gt;&lt;/td&gt; 
 &lt;td&gt;Any persistent storage means that users’ data are vulnerable to hacking, corporate and government surveillance, and other privacy issues. How will you ensure users’ data are secure when stored? How will you inform users and get their consent for using their data?&lt;/td&gt;&lt;/tr&gt;
 
-&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/sqpothkeau8h8co/red_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt; 
+&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/sqpothkeau8h8co/red_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Red Light - Warnings&quot;&gt;&lt;/td&gt; 
 &lt;td&gt;Users may be less willing to share or engage fully when concerned about storage and privacy.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-[[Take me to the next principle.|Replicability]]</tw-passagedata><tw-passagedata pid="20" name="Persistent" tags="" position="951,1552" size="100,100">Implications for &lt;b&gt;Long-Term Storage&lt;/b&gt;
-&lt;table&gt;/*&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/c3lphq1491qiv41/green_light.png?raw=1&quot; width=&quot;100&quot; style=&quot;vertical-align:middle&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt;
+&lt;p class=&quot;case_study&quot;&gt;Case Study: &lt;a href=&quot;https://www.theguardian.com/commentisfree/2018/mar/28/all-the-data-facebook-google-has-on-you-privacy&quot; target=&quot;_blank&quot;&gt;This 2018 article describes the data Google and Facebook collect from their users--not just how long they store the data, but all the different types of data too.&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&quot;navitem&quot;&gt;[[← Choose a different answer|Storage]]&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[[Take me to the next principle. →|Replicability]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="20" name="Persistent" tags="" position="951,1552" size="100,100">Implications for &lt;b&gt;Long-Term Storage&lt;/b&gt;
+&lt;table&gt;/*&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/c3lphq1491qiv41/green_light.png?raw=1&quot; width=&quot;100&quot; style=&quot;vertical-align:middle&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Green Light - Benefits&quot;&gt;&lt;/td&gt;
 &lt;td&gt;N/A&lt;/td&gt;&lt;/tr&gt;*/
-&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/trjwkn8mzkd0ddy/yellow_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt; 
+&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/trjwkn8mzkd0ddy/yellow_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Yellow Light - Caution&quot;&gt;&lt;/td&gt; 
 &lt;td&gt;Long-term persistent storage means that users’ data are vulnerable to hacking, corporate and government surveillance, and other privacy issues. How will you ensure users’ data are secure when stored? How will you inform users and get their consent for using their data?&lt;/td&gt;&lt;/tr&gt;
 
-&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/sqpothkeau8h8co/red_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt; 
+&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/sqpothkeau8h8co/red_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Red Light - Warnings&quot;&gt;&lt;/td&gt; 
 &lt;td&gt;Users may be less willing to share or engage fully when concerned about long-term storage and privacy.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-[[Take me to the next principle.|Replicability]]</tw-passagedata><tw-passagedata pid="21" name="Replicability" tags="" position="800,1702" size="100,100">&lt;b&gt;Replicability&lt;/b&gt;
+&lt;p class=&quot;case_study&quot;&gt;Case Study: &lt;a href=&quot;https://www.theguardian.com/commentisfree/2018/mar/28/all-the-data-facebook-google-has-on-you-privacy&quot; target=&quot;_blank&quot;&gt;This 2018 article describes the data Google and Facebook collect from their users--not just how long they store the data, but all the different types of data too.&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&quot;navitem&quot;&gt;[[← Choose a different answer|Storage]]&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[[Take me to the next principle. →|Replicability]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="21" name="Replicability" tags="" position="800,1702" size="100,100">&lt;b&gt;Replicability&lt;/b&gt;
+
 &lt;img src=&quot;https://www.dropbox.com/s/d9lztsicvph5dc7/replicability.svg?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt; Replicability, the ability to make copies of messages or other data, is closely coupled with storage (above). Pervasive storage increases ease of replicability by expanding the window of time within which replication can occur. Conversely, ephemerality decreases ease of replicability by limiting that window.
 
 How easy is it for users to copy data stored in the app and, perhaps, send it to someone else?
@@ -371,28 +418,34 @@ How easy is it for users to copy data stored in the app and, perhaps, send it to
 &lt;li&gt;[[Very easy, one click!][$replicability = &quot;Highly&quot;]] (e.g., email can easily be forwarded to someone else)&lt;/li&gt;
 &lt;li&gt;[[Definitely possible][$replicability = &quot;Somewhat&quot;]] (e.g., users can take screenshots of private Instagram posts and send to another user)&lt;/li&gt;
 &lt;li&gt;[[Very difficult][$replicability = &quot;Very difficult&quot;]] (e.g., messages on the Confide app are encrypted, self-destructing, and screenshot-proof)&lt;/li&gt;
-&lt;/ul&gt;</tw-passagedata><tw-passagedata pid="22" name="Very easy, one click!" tags="" position="651,1852" size="100,100">Implications for &lt;b&gt;Highly Replicable&lt;/b&gt;
-&lt;table&gt;/*&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/c3lphq1491qiv41/green_light.png?raw=1&quot; width=&quot;100&quot; style=&quot;vertical-align:middle&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt; 
+&lt;/ul&gt;
+
+[[← Back to Storage|Storage]]</tw-passagedata><tw-passagedata pid="22" name="Very easy, one click!" tags="" position="651,1852" size="100,100">Implications for &lt;b&gt;Highly Replicable&lt;/b&gt;
+&lt;table&gt;/*&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/c3lphq1491qiv41/green_light.png?raw=1&quot; width=&quot;100&quot; style=&quot;vertical-align:middle&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Green Light - Benefits&quot;&gt;&lt;/td&gt; 
 &lt;td&gt;N/A&lt;/td&gt;&lt;/tr&gt;*/
-&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/trjwkn8mzkd0ddy/yellow_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt; 
+&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/trjwkn8mzkd0ddy/yellow_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Yellow Light - Caution&quot;&gt;&lt;/td&gt; 
 &lt;td&gt;It is important to ensure users understand all of the ways their messages and other data might be replicated (by you, corporate or government entities, other users, malicious actors, etc.). How might replicated messages also be edited/distorted?&lt;/td&gt;&lt;/tr&gt;
-/*&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/sqpothkeau8h8co/red_light.png?raw=1&quot; width=&quot;100&quot; style=&quot;vertical-align:middle&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt; 
+/*&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/sqpothkeau8h8co/red_light.png?raw=1&quot; width=&quot;100&quot; style=&quot;vertical-align:middle&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Red Light - Warnings&quot;&gt;&lt;/td&gt; 
 &lt;td&gt;N/A&lt;/td&gt;&lt;/tr&gt;*/&lt;/table&gt;
-[[Next question, please.|SocialCues]]</tw-passagedata><tw-passagedata pid="23" name="Definitely possible" tags="" position="801,1852" size="100,100">Implications for &lt;b&gt;Somewhat Replicable&lt;/b&gt;
-&lt;table&gt;/*&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/c3lphq1491qiv41/green_light.png?raw=1&quot; width=&quot;100&quot; style=&quot;vertical-align:middle&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt; 
+&lt;p class=&quot;case_study&quot;&gt;Case Study: &lt;a href=&quot;https://www.theatlantic.com/technology/archive/2018/10/twitter-should-kill-retweet/574321/&quot; target=&quot;_blank&quot;&gt;Read this op-ed about why one user wants Twitter to &quot;kill the retweet.&quot;&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&quot;navitem&quot;&gt;[[← Choose a different answer|Replicability]]&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[[Next question, please. →|SocialCues]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="23" name="Definitely possible" tags="" position="801,1852" size="100,100">Implications for &lt;b&gt;Somewhat Replicable&lt;/b&gt;
+&lt;table&gt;/*&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/c3lphq1491qiv41/green_light.png?raw=1&quot; width=&quot;100&quot; style=&quot;vertical-align:middle&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Green Light - Benefits&quot;&gt;&lt;/td&gt; 
 &lt;td&gt;N/A&lt;/td&gt;&lt;/tr&gt;*/
-&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/trjwkn8mzkd0ddy/yellow_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt; 
+&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/trjwkn8mzkd0ddy/yellow_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Yellow Light - Caution&quot;&gt;&lt;/td&gt; 
 &lt;td&gt;It is important to ensure users understand all of the ways their messages and other data might be replicated (by you, corporate or government entities, other users, malicious actors, etc.). How might replicated messages also be edited/distorted?&lt;/td&gt;&lt;/tr&gt;
-/*&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/sqpothkeau8h8co/red_light.png?raw=1&quot; width=&quot;100&quot; style=&quot;vertical-align:middle&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt; 
+/*&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/sqpothkeau8h8co/red_light.png?raw=1&quot; width=&quot;100&quot; style=&quot;vertical-align:middle&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Red Light - Warnings&quot;&gt;&lt;/td&gt; 
 &lt;td&gt;N/A&lt;/td&gt;&lt;/tr&gt;*/&lt;/table&gt;
-[[Next question, please.|SocialCues]]</tw-passagedata><tw-passagedata pid="24" name="Very difficult" tags="" position="950,1852" size="100,100">Implications for &lt;b&gt;Not Replicable&lt;/b&gt;
-&lt;table&gt;/*&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/c3lphq1491qiv41/green_light.png?raw=1&quot; width=&quot;100&quot; style=&quot;vertical-align:middle&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt; 
+&lt;p class=&quot;case_study&quot;&gt;Case Study: &lt;a href=&quot;https://www.theatlantic.com/technology/archive/2018/10/twitter-should-kill-retweet/574321/&quot; target=&quot;_blank&quot;&gt;Read this op-ed about why one user wants Twitter to &quot;kill the retweet.&quot;&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&quot;navitem&quot;&gt;[[← Choose a different answer|Replicability]]&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[[Next question, please. →|SocialCues]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="24" name="Very difficult" tags="" position="950,1852" size="100,100">Implications for &lt;b&gt;Not Replicable&lt;/b&gt;
+&lt;table&gt;/*&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/c3lphq1491qiv41/green_light.png?raw=1&quot; width=&quot;100&quot; style=&quot;vertical-align:middle&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Green Light - Benefits&quot;&gt;&lt;/td&gt; 
 &lt;td&gt;N/A&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/trjwkn8mzkd0ddy/yellow_light.png?raw=1&quot; width=&quot;100&quot; style=&quot;vertical-align:middle&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt; 
+&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/trjwkn8mzkd0ddy/yellow_light.png?raw=1&quot; width=&quot;100&quot; style=&quot;vertical-align:middle&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Yellow Light - Caution&quot;&gt;&lt;/td&gt; 
 &lt;td&gt;N/A&lt;/td&gt;&lt;/tr&gt;*/
-&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/sqpothkeau8h8co/red_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt; 
+&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/sqpothkeau8h8co/red_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Red Light - Warnings&quot;&gt;&lt;/td&gt; 
 &lt;td&gt;It is rare that any digital communication is not replicable in some way. For example, messages on synchronous tools like Skype have lower risk of replication, but can be replicated using special programs or even videorecording. It is important to ensure users understand all of the ways their messages and other data might be replicated (by you, corporate or government entities, other users, malicious actors, etc.). How might replicated messages also be edited/distorted?&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-[[Next question, please.|SocialCues]]</tw-passagedata><tw-passagedata pid="25" name="SocialCues" tags="" position="801,2000" size="100,100">&lt;b&gt;Social Cues&lt;/b&gt;
+&lt;p class=&quot;case_study&quot;&gt;Case Study: &lt;a href=&quot;https://www.theatlantic.com/technology/archive/2018/10/twitter-should-kill-retweet/574321/&quot; target=&quot;_blank&quot;&gt;Read this op-ed about why one user wants Twitter to &quot;kill the retweet.&quot;&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&quot;navitem&quot;&gt;[[← Choose a different answer|Replicability]]&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[[Next question, please. →|SocialCues]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="25" name="SocialCues" tags="" position="801,2000" size="100,100">&lt;b&gt;Social Cues&lt;/b&gt;
+
 &lt;img src=&quot;https://www.dropbox.com/s/hvgg4lbt68zh1ez/social_cues.svg?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt; Social cues refer to the ways people communicate information about social relationships. Social cues can be verbal, but are also non-verbal, and can be communicated through facial expressions, body language, or even apparent identity.
 
 How easy is it to read and share social/relational/body cues with this feature? 
@@ -400,34 +453,42 @@ How easy is it to read and share social/relational/body cues with this feature?
 &lt;li&gt;[[As easy as possible, that&#39;s the whole point!][$socialCues = &quot;High fidelity&quot;]] (e.g., high fidelity video, 3D mapping, biosignals like heart rate and skin temperature)&lt;/li&gt;
 &lt;li&gt;[[Users can share several kinds of cues][$socialCues = &quot;Several&quot;]] (e.g., feature offers geolocation sharing, posting photos and videos)&lt;/li&gt;
 &lt;li&gt;[[It&#39;s pretty difficult to share social cues][$socialCues = &quot;Limited&quot;]] (e.g., text-only communication)&lt;/li&gt;
-&lt;/ul&gt;</tw-passagedata><tw-passagedata pid="26" name="As easy as possible, that&#39;s the whole point!" tags="" position="648,2148" size="100,100">Implications for &lt;b&gt;High Fidelity Social Cues&lt;/b&gt;
-&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/c3lphq1491qiv41/green_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt; 
+&lt;/ul&gt;
+
+[[← Back to Replicability|Replicability]]</tw-passagedata><tw-passagedata pid="26" name="As easy as possible, that&#39;s the whole point!" tags="" position="648,2148" size="100,100">Implications for &lt;b&gt;High Fidelity Social Cues&lt;/b&gt;
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/c3lphq1491qiv41/green_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Green Light - Benefits&quot;&gt;&lt;/td&gt; 
 &lt;td&gt;Social cues allow users to better understand a shared context - often leading to higher feelings of intimacy.&lt;/td&gt;&lt;/tr&gt;
 
-&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/trjwkn8mzkd0ddy/yellow_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt; 
+&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/trjwkn8mzkd0ddy/yellow_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Yellow Light - Caution&quot;&gt;&lt;/td&gt; 
 &lt;td&gt;Social cues in digital tools can lead to the reproduction of offline disparities and discrimination. Limiting social cues can allow for communication with reduced judgement based on identity. Consider building in options for users to control which social cues to present.&lt;/td&gt;&lt;/tr&gt;
-/*&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/sqpothkeau8h8co/red_light.png?raw=1&quot; width=&quot;100&quot; style=&quot;vertical-align:middle&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt; 
+/*&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/sqpothkeau8h8co/red_light.png?raw=1&quot; width=&quot;100&quot; style=&quot;vertical-align:middle&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Red Light - Warnings&quot;&gt;&lt;/td&gt; 
 &lt;td&gt;N/A&lt;/td&gt;&lt;/tr&gt;*/&lt;/table&gt;
-[[Conclusion]]
-/*[[Okay, what&#39;s the last principle to consider?|SocialInteractivity]]*/</tw-passagedata><tw-passagedata pid="27" name="Users can share several kinds of cues" tags="" position="801,2153" size="100,100">Implications for &lt;b&gt;Several Social Cues&lt;/b&gt;
-&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/c3lphq1491qiv41/green_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt; 
+&lt;p class=&quot;case_study&quot;&gt;Case Study: &lt;a href=&quot;https://www.wired.com/story/guide-emoji/&quot; target=&quot;_blank&quot;&gt;Emoticons are an easy way to add social cues to digital communication. Read more about the history of emoji here.&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&quot;navitem&quot;&gt;[[← Choose a different answer|SocialCues]]&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[[Conclusion →|Conclusion]]&lt;/p&gt;
+/*[[Okay, what&#39;s the last principle to consider?|SocialInteractivity]]*/
+
+</tw-passagedata><tw-passagedata pid="27" name="Users can share several kinds of cues" tags="" position="801,2153" size="100,100">Implications for &lt;b&gt;Several Social Cues&lt;/b&gt;
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/c3lphq1491qiv41/green_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Green Light - Benefits&quot;&gt;&lt;/td&gt; 
 &lt;td&gt;Social cues allow users to better understand a shared context - often leading to higher feelings of intimacy. Limiting social cues can allow for communication with reduced judgement based on identity. Consider building in options for users to control which social cues to present.&lt;/td&gt;&lt;/tr&gt;
-/*&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/trjwkn8mzkd0ddy/yellow_light.png?raw=1&quot; width=&quot;100&quot; style=&quot;vertical-align:middle&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt; 
+/*&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/trjwkn8mzkd0ddy/yellow_light.png?raw=1&quot; width=&quot;100&quot; style=&quot;vertical-align:middle&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Yellow Light - Caution&quot;&gt;&lt;/td&gt; 
 &lt;td&gt;N/A&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/sqpothkeau8h8co/red_light.png?raw=1&quot; width=&quot;100&quot; style=&quot;vertical-align:middle&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt; 
+&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/sqpothkeau8h8co/red_light.png?raw=1&quot; width=&quot;100&quot; style=&quot;vertical-align:middle&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Red Light - Warnings&quot;&gt;&lt;/td&gt; 
 &lt;td&gt;N/A&lt;/td&gt;&lt;/tr&gt;*/&lt;/table&gt;
-[[Conclusion]]
+&lt;p class=&quot;case_study&quot;&gt;Case Study: &lt;a href=&quot;https://www.wired.com/story/guide-emoji/&quot; target=&quot;_blank&quot;&gt;Emoticons are an easy way to add social cues to digital communication. Read more about the history of emoji here.&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&quot;navitem&quot;&gt;[[← Choose a different answer|SocialCues]]&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[[Conclusion →|Conclusion]]&lt;/p&gt;
 /*[[Okay, what&#39;s the last principle to consider?|SocialInteractivity]]*/</tw-passagedata><tw-passagedata pid="28" name="It&#39;s pretty difficult to share social cues" tags="" position="951,2150" size="100,100">Implications for &lt;b&gt;Limited Social Cues&lt;/b&gt;
-&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/c3lphq1491qiv41/green_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt; 
+&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/c3lphq1491qiv41/green_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Green Light - Benefits&quot;&gt;&lt;/td&gt; 
 &lt;td&gt;Social cues in digital tools can lead to the reproduction of offline disparities and discrimination. Limiting social cues can allow users to communicate with reduced judgement based on identity.&lt;/td&gt;&lt;/tr&gt;
 
-&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/trjwkn8mzkd0ddy/yellow_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt; 
+&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/trjwkn8mzkd0ddy/yellow_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Yellow Light - Caution&quot;&gt;&lt;/td&gt; 
 &lt;td&gt;Sparse social cues can lead to disinhibition. Disinhibition can be positive--it can encourage honesty and self-disclosure. It can also lead to bullying or abuse. Ensure your users know the social norms and expectations for behavior and how to report abuse.&lt;/td&gt;&lt;/tr&gt;
 
-&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/sqpothkeau8h8co/red_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;/td&gt; 
+&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/sqpothkeau8h8co/red_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Red Light - Warnings&quot;&gt;&lt;/td&gt; 
 &lt;td&gt;Social cues help people understand a shared context, often leading to higher feelings of intimacy. How will your users understand their shard social context with sparse social cues? Consider how you might build in features like emoticons to communicate social cues.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-[[Conclusion]]
+&lt;p class=&quot;case_study&quot;&gt;Case Study: &lt;a href=&quot;https://www.wired.com/story/guide-emoji/&quot; target=&quot;_blank&quot;&gt;Emoticons are an easy way to add social cues to digital communication. Read more about the history of emoji here.&lt;/a&gt;&lt;/p&gt;
+&lt;p class=&quot;navitem&quot;&gt;[[← Choose a different answer|SocialCues]]&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[[Conclusion →|Conclusion]]&lt;/p&gt;
 /*[[Okay, what&#39;s the last principle to consider?|SocialInteractivity]]*/</tw-passagedata><tw-passagedata pid="29" name="SocialInteractivity" tags="" position="802,2300" size="100,100">&lt;b&gt;Social Interactivity&lt;/b&gt;
+
 &lt;img src=&quot;https://www.dropbox.com/s/ffd1ylgil581s2n/interactivity.svg?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt; While “interactivity” is a broad term touching all of HCI, within Communication, it primarily refers to the social interactivity between individuals or groups of people. Interactivity can vary both in the type of interaction supported (e.g., competitive gaming vs. text messaging), and the intensity (e.g., real-time conversation vs. asynchronous message boards). Systems can provide multiple types of social interaction, with varied degrees of intensity. High interactivity may be essential to provide certain functionalities (e.g., intimate, unfiltered connections), while low interactivity may be required for others (e.g., reducing biases, providing stable information systems).
 
 How socially interactive is your feature?
@@ -443,7 +504,7 @@ How socially interactive is your feature?
 
 [[Conclusion]]</tw-passagedata><tw-passagedata pid="33" name="Conclusion" tags="" position="800,2600" size="100,100">&lt;b&gt;Personalized Results&lt;/b&gt;
 &lt;img src=&quot;https://www.dropbox.com/s/7sxxxxgl1x8bqxd/light_bulb.svg?raw=1&quot; width=&quot;100&quot; align=&quot;right&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;&lt;if $synch is &quot;N/A&quot; or $mobility is &quot;N/A&quot; or $reach is &quot;N/A&quot; or $storage is &quot;N/A&quot; or $replicability is &quot;N/A&quot; or $socialCues is &quot;N/A&quot;&gt;&gt;Please complete every question to see your results. Unanswered questions are listed as &quot;N/A&quot; in the answers to the left.&lt;&lt;else&gt;&gt;
-Analyzing a technology along the dimensions described can help reveal inconsistencies of design. Below we provide customized design challenges based on your responses. Computer-mediated communication is complex and these questions are meant to be thought provoking but not provide direct solutions.
+&lt;div id=&quot;results&quot;&gt;Analyzing a technology along the dimensions described can help reveal inconsistencies of design. Below we provide customized design challenges based on your responses. Computer-mediated communication is complex and these questions are meant to be thought provoking but not provide direct solutions.
 
 &lt;img src=&quot;https://www.dropbox.com/s/wcdnrlmsu44f3h9/clock.svg?raw=1&quot; width=&quot;20&quot;&gt; [[Temporal structure|TemporalStructure]]: &lt;&lt;print $synch&gt;&gt;
 &lt;&lt;if $synch is &quot;Synchronous&quot;&gt;&gt;If your product supports more than a couple people, how will you ensure larger groups can communicate effectively? As synchronous communication feels intimate, how will you remind users of their actual degree of privacy?&lt;&lt;elseif $synch is &quot;Asynchronous&quot;&gt;&gt;How will you help your users build norms around response times to avoid both large communication gaps as well as pressure to respond immediately?&lt;&lt;endif&gt;&gt;
@@ -461,7 +522,20 @@ Analyzing a technology along the dimensions described can help reveal inconsiste
 &lt;&lt;if $replicability is &quot;Highly&quot;&gt;&gt;How will you ensure users understand all of the ways their messages and other data might be replicated (by you, corporate or government entities, other users, malicious actors, etc.)? How might replicated messages also be edited/distorted?&lt;&lt;elseif $replicability is &quot;Somewhat&quot;&gt;&gt;How will you ensure users understand all of the ways their messages and other data might be replicated (by you, corporate or government entities, other users, malicious actors, etc.)? How might replicated messages also be edited/distorted?&lt;&lt;elseif $replicability is &quot;Very difficult&quot;&gt;&gt;It is almost impossible to have a completely non-replicable form of communication, how will you ensure users understand all of the ways their messages and other data might be replicated (by you, corporate or government entities, other users, malicious actors, etc.)? How might replicated messages also be edited/distorted?&lt;&lt;endif&gt;&gt;
 
 &lt;img src=&quot;https://www.dropbox.com/s/hvgg4lbt68zh1ez/social_cues.svg?raw=1&quot; width=&quot;20&quot;&gt; [[Social cues|SocialCues]]: &lt;&lt;print $socialCues&gt;&gt;
-&lt;&lt;if $socialCues is &quot;High fidelity&quot;&gt;&gt;How will you build in ways for your users to control which social cues are shared?&lt;&lt;elseif $socialCues is &quot;Several&quot;&gt;&gt;How will you build in ways for your users to control which social cues are shared?&lt;&lt;elseif $socialCues is &quot;Limited&quot;&gt;&gt;What features will you add for your users to achieve shared social context with sparse social cues (i.e. emoticons, likes, etc.)?&lt;&lt;else&gt;&gt;&lt;&lt;endif&gt;&gt;
+&lt;&lt;if $socialCues is &quot;High fidelity&quot;&gt;&gt;How will you build in ways for your users to control which social cues are shared?&lt;&lt;elseif $socialCues is &quot;Several&quot;&gt;&gt;How will you build in ways for your users to control which social cues are shared?&lt;&lt;elseif $socialCues is &quot;Limited&quot;&gt;&gt;What features will you add for your users to achieve shared social context with sparse social cues (i.e. emoticons, likes, etc.)?&lt;&lt;else&gt;&gt;&lt;&lt;endif&gt;&gt;&lt;/div&gt;
+&lt;p class=&quot;navitem&quot;&gt;[[← Back to Introduction (choices will be saved)|Introduction]]&lt;/p&gt;
+
+&lt;button onclick=&quot;printCanvas()&quot;&gt;Print&lt;/button&gt;
+&lt;script&gt;
+function printFunction() {
+	window.print();
+}
+
+function printCanvas() {
+	window.open(&#39;&#39;,  document.getElementById(&#39;results&#39;).toDataURL());
+}
+&lt;/script&gt;
+
 &lt;&lt;endif&gt;&gt;
 
 /*&lt;img src=&quot;https://www.dropbox.com/s/ffd1ylgil581s2n/interactivity.svg?raw=1&quot; width=&quot;20&quot;&gt; [[Social interactivity|SocialInteractivity]]: &lt;&lt;print $socialInteractivity&gt;&gt;*/</tw-passagedata></tw-storydata>
