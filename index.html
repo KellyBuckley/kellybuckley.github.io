@@ -206,11 +206,13 @@ p.navitem
 #story-title {color: #0059B3; text-align: left;}
 
 </style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Introduction" tags="" position="802,402" size="100,100">&lt;b&gt;Introduction&lt;/b&gt;
-&lt;img src=&quot;https://www.dropbox.com/s/7o10iln4i10uvyv/intro.svg?raw=1&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; width=&quot;100&quot;&gt; InterAct is a tool designed to help people building computer-mediated communication better understand the impacts of their design on interpersonal communication. It helps you work through principles from communication theory and gives you feedback on how each relates to the design of your product.
+&lt;img src=&quot;https://www.dropbox.com/s/7o10iln4i10uvyv/intro.svg?raw=1&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; width=&quot;100&quot;&gt; Texting, email, and Instagram are all technologies people use to interact and communicate with each other. With texting and email, users generally send text-based messages back and forth. On Instagram, users share images with short captions with groups of people. These modes of interaction are different from face-to-face conversation. Humans in different cultures have developed &quot;norms&quot; (i.e. common ways of doing things) around face-to-face communication for many years. Communicating via technology is comparatively recent and norms and consequences are less well understood, however, a branch of the field of Communication has been dedicated to this topic since the 1980&#39;s. This tool is designed to help you dynamically apply principles from Communication theory to the design of new communication technology.
 
-This tool is intended to be used when designing a single communication feature (e.g., Facebook Messenger) rather than an entire product (e.g., Facebook).
+A key concept for computer-mediated communication is “interactivity.&quot; Interactivity can be thought of as the intensity of an interaction. When using a computer, someone can interact with other people (social interactivity), the user interface (technical interactivity), or the provided content (textual interactivity). In all cases, interactivity is a continuum not a binary. Systems can provide multiple types of social interaction, with varied degrees of intensity. High interactivity may be essential to provide certain functionalities (e.g. intimate, unfiltered connections), while low interactivity may be required for others (e.g. reducing biases, providing stable information systems).
 
-As a first step, take a minute and reflect on the communication feature you’re building. Write down a few words on a sheet of paper and keep it in mind as you go through the questions.
+This tool will review principles of technology design that affect interactivity and communication such as audience reach and whether messages are sent synchronously or asynchronously. For each principle there will be a description as well as implications based on your input. At the end, there will be a summary of your responses and a personalized list of questions for you to consider in your design.
+
+This tool is intended to be used when designing a single communication feature (e.g. Facebook Messenger) rather than an entire product (e.g. Facebook). As a first step, take a minute and reflect on the communication feature you’re building. Write down a few words on a sheet of paper and keep it in mind as you go through the questions.
 
 Some examples:
 &lt;ul&gt;
@@ -218,7 +220,7 @@ Some examples:
 &lt;li&gt;A text-only chat service for mobile phones that allows for one-on-one or small group conversations&lt;/li&gt;
 &lt;li&gt;A social media platform that allows users to post photos and videos which disappear after 24 hours&lt;/li&gt;
 &lt;/ul&gt;
-[[Okay, let&#39;s get started-&gt;TemporalStructure]]
+&lt;p class=&quot;navitem&quot;&gt;[[Okay, let&#39;s get started-&gt;TemporalStructure]]&lt;/p&gt;
 
 &lt;&lt;if $setupComplete is not &quot;true&quot;&gt;&gt;
 &lt;&lt;set $synch = &quot;N/A&quot;&gt;&gt;
@@ -237,7 +239,7 @@ Choose the temporal structure that best describes your feature:
 &lt;li&gt;[[Synchronous][$synch = &quot;Synchronous&quot;]] (e.g., video chat)&lt;/li&gt;
 &lt;li&gt;[[Asynchronous][$synch = &quot;Asynchronous&quot;]] (e.g., texting)&lt;/li&gt;
 &lt;/ul&gt;
-[[← Introduction|Introduction]]
+&lt;p class=&quot;navitem&quot;&gt;[[← Introduction|Introduction]]&lt;/p&gt;
 
 &lt;&lt;set $setupComplete = &quot;true&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="Asynchronous" tags="" position="900,671" size="100,100">Implications for &lt;b&gt;Asynchronous&lt;/b&gt; Communication
 &lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/c3lphq1491qiv41/green_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Green Light - Benefits&quot;&gt;&lt;/td&gt; 
@@ -270,7 +272,7 @@ Choose the level of mobility that best describes your feature:
 &lt;li&gt;[[Not mobile][$mobility = &quot;Not mobile&quot;]] (e.g., desktop computer or VR headset)&lt;/li&gt;
 &lt;/ul&gt;
 
-[[← Back to Temporal Structure|TemporalStructure]]</tw-passagedata><tw-passagedata pid="6" name="Highly mobile" tags="" position="651,950" size="100,100">Implications for &lt;b&gt;Highly Mobile&lt;/b&gt; Communication
+&lt;p class=&quot;navitem&quot;&gt;[[← Back to Temporal Structure|TemporalStructure]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="6" name="Highly mobile" tags="" position="651,950" size="100,100">Implications for &lt;b&gt;Highly Mobile&lt;/b&gt; Communication
 &lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/c3lphq1491qiv41/green_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Green Light - Benefits&quot;&gt;&lt;/td&gt;
 &lt;td&gt;Highly mobile products &lt;b&gt;allow users to communicate when it is convenient for them&lt;/b&gt;, possibly increasing engagement. Users may feel &lt;b&gt;safer&lt;/b&gt; since they can communicate with others no matter where they are. Users are also able to &lt;b&gt;document and share localized activity&lt;/b&gt; others may not have access to, such as political protests.&lt;/td&gt;
 &lt;/tr&gt;
@@ -338,7 +340,7 @@ Choose the audience size your feature allows for:
 &lt;li&gt;[[Public to anyone][$reach = &quot;Public&quot;]] (e.g., public Instagram posts)&lt;/li&gt;
 &lt;/ul&gt;
 
-[[← Back to Mobility|Mobility]]</tw-passagedata><tw-passagedata pid="14" name="One-to-one communication" tags="" position="650,1251" size="100,100">Implications for Communicating &lt;b&gt;One-to-One&lt;/b&gt;
+&lt;p class=&quot;navitem&quot;&gt;[[← Back to Mobility|Mobility]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="14" name="One-to-one communication" tags="" position="650,1251" size="100,100">Implications for Communicating &lt;b&gt;One-to-One&lt;/b&gt;
 &lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/c3lphq1491qiv41/green_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Green Light - Benefits&quot;&gt;&lt;/td&gt;
 &lt;td&gt;Communication can feel &lt;b&gt;intimate&lt;/b&gt; and users may share more freely.&lt;/td&gt;
 &lt;/tr&gt;
@@ -383,7 +385,7 @@ How long can users see data stored in the feature?
 &lt;li&gt;[[Persistent][$storage = &quot;Persistent&quot;]] (e.g., email)&lt;/li&gt;
 &lt;/ul&gt;
 
-[[← Back to Reach|Reach]]</tw-passagedata><tw-passagedata pid="18" name="Little to no" tags="" position="651,1552" size="100,100">Implications for &lt;b&gt;Little to No Storage&lt;/b&gt;
+&lt;p class=&quot;navitem&quot;&gt;[[← Back to Reach|Reach]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="18" name="Little to no" tags="" position="651,1552" size="100,100">Implications for &lt;b&gt;Little to No Storage&lt;/b&gt;
 &lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/c3lphq1491qiv41/green_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Green Light - Benefits&quot;&gt;&lt;/td&gt; 
 &lt;td&gt;Ephemeral messages that do not persist in storage can make &lt;b&gt;users feel more secure&lt;/b&gt; and more willing to share and engage fully.&lt;/td&gt;&lt;/tr&gt;
 
@@ -421,7 +423,7 @@ How easy is it for users to copy data stored in the app and, perhaps, send it to
 &lt;li&gt;[[Very difficult][$replicability = &quot;Very difficult&quot;]] (e.g., messages on the Confide app are encrypted, self-destructing, and screenshot-proof)&lt;/li&gt;
 &lt;/ul&gt;
 
-[[← Back to Storage|Storage]]</tw-passagedata><tw-passagedata pid="22" name="Very easy, one click!" tags="" position="651,1852" size="100,100">Implications for &lt;b&gt;Highly Replicable&lt;/b&gt;
+&lt;p class=&quot;navitem&quot;&gt;[[← Back to Storage|Storage]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="22" name="Very easy, one click!" tags="" position="651,1852" size="100,100">Implications for &lt;b&gt;Highly Replicable&lt;/b&gt;
 &lt;table&gt;/*&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/c3lphq1491qiv41/green_light.png?raw=1&quot; width=&quot;100&quot; style=&quot;vertical-align:middle&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Green Light - Benefits&quot;&gt;&lt;/td&gt; 
 &lt;td&gt;N/A&lt;/td&gt;&lt;/tr&gt;*/
 &lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/trjwkn8mzkd0ddy/yellow_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Yellow Light - Caution&quot;&gt;&lt;/td&gt; 
@@ -456,7 +458,7 @@ How easy is it to read and share social/relational/body cues with this feature?
 &lt;li&gt;[[It&#39;s pretty difficult to share social cues][$socialCues = &quot;Limited&quot;]] (e.g., text-only communication)&lt;/li&gt;
 &lt;/ul&gt;
 
-[[← Back to Replicability|Replicability]]</tw-passagedata><tw-passagedata pid="26" name="As easy as possible, that&#39;s the whole point!" tags="" position="648,2148" size="100,100">Implications for &lt;b&gt;High Fidelity Social Cues&lt;/b&gt;
+&lt;p class=&quot;navitem&quot;&gt;[[← Back to Replicability|Replicability]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="26" name="As easy as possible, that&#39;s the whole point!" tags="" position="648,2148" size="100,100">Implications for &lt;b&gt;High Fidelity Social Cues&lt;/b&gt;
 &lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/c3lphq1491qiv41/green_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Green Light - Benefits&quot;&gt;&lt;/td&gt; 
 &lt;td&gt;Social cues allow users to better understand a shared context - often leading to higher feelings of &lt;b&gt;intimacy&lt;/b&gt;.&lt;/td&gt;&lt;/tr&gt;
 
