@@ -102,7 +102,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 	</div>
 	<tw-storydata name="InterAct: A Tool for Designing Computer-Mediated Communication" startnode="1" creator="Twine" creator-version="2.3.9" ifid="6A04E3A1-CBA5-4154-B611-29E74097BBE4" zoom="0.6" format="SugarCube" format-version="2.31.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">body
 {
-	font-size: 125%;
+	font-size: 120%;
   	background-color: white;
   	color: darkslategray;
 }
@@ -125,6 +125,7 @@ a:hover
 }
 table 
 {
+  	display: table;
   	width: 100%;
   	border-collapse: separate;
 	border-spacing: 30px;
@@ -147,7 +148,7 @@ p.navitem
 {
   	text-align: center;
   	padding: 30px;
-  	font-size: 90%;
+  	font-size: 100%;
 }
 
 #menu-item-saves {
@@ -200,19 +201,26 @@ p.navitem
 	border-color:lightgray;
 }
 
-#story-subtitle {font-size: 90%; text-align: left;}
-#story-author {font-size: 90%; text-align: left; font-weight: normal; font-style: italic;}
-#story-caption {font-size: 90%; text-align: left;}
-#story-title {color: #0059B3; text-align: left;}
+#story-subtitle {font-size: 100%; text-align: left;}
+#story-author {font-size: 100%; text-align: left; font-weight: normal; font-style: italic;}
+#story-caption {font-size: 100%; text-align: left;}
+#story-title 
+{
+  	font-size: 110%; 
+  	color: #0059B3; 
+  	text-align: left; 
+  	padding-top: 20px;
+  	padding-bottom: 10px;
+}
 
 </style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Introduction" tags="" position="802,402" size="100,100">&lt;b&gt;Introduction&lt;/b&gt;
-&lt;img src=&quot;https://www.dropbox.com/s/7o10iln4i10uvyv/intro.svg?raw=1&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; width=&quot;100&quot;&gt; Texting, email, and Instagram are all technologies people use to interact and communicate with each other. With texting and email, users generally send text-based messages back and forth. On Instagram, users share images with short captions with groups of people. These modes of interaction are different from face-to-face conversation. Humans in different cultures have developed &quot;norms&quot; (i.e. common ways of doing things) around face-to-face communication for many years. Communicating via technology is comparatively recent and norms and consequences are less well understood, however, a branch of the field of Communication has been dedicated to this topic since the 1980&#39;s. This tool is designed to help you dynamically apply principles from Communication theory to the design of new communication technology.
+&lt;img src=&quot;https://www.dropbox.com/s/7o10iln4i10uvyv/intro.svg?raw=1&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; width=&quot;100&quot;&gt; InterAct is a tool to help product designers think through the social and communication features of their products. The tool will provide descriptions, possible implications, case studies, and questions for reflection about &lt;b&gt;six principles of digital personal connection&lt;/b&gt;. At the end, you’ll receive a &lt;b&gt;personalized list of questions&lt;/b&gt; to reflect on as you design your feature.
 
-A key concept for computer-mediated communication is “interactivity.&quot; Interactivity can be thought of as the intensity of an interaction. When using a computer, someone can interact with other people (social interactivity), the user interface (technical interactivity), or the provided content (textual interactivity). In all cases, interactivity is a continuum not a binary. Systems can provide multiple types of social interaction, with varied degrees of intensity. High interactivity may be essential to provide certain functionalities (e.g. intimate, unfiltered connections), while low interactivity may be required for others (e.g. reducing biases, providing stable information systems).
+Different kinds of digital technologies have different norms, affordances, and possibilities for personal connection. Although these technologies are new, researchers in communication studies have been studying computer-mediated communication since the 1980s! With this tool, you can &lt;b&gt;dynamically apply principles from communication studies&lt;/b&gt; in your technological designs.
 
-This tool will review principles of technology design that affect interactivity and communication such as audience reach and whether messages are sent synchronously or asynchronously. For each principle there will be a description as well as implications based on your input. At the end, there will be a summary of your responses and a personalized list of questions for you to consider in your design.
+If you want to change an answer, use the forward and backward buttons on the page or click the principles listed on the left menu. You can find your personalized results in the conclusion after you answer all six questions.
 
-This tool is intended to be used when designing a single communication feature (e.g. Facebook Messenger) rather than an entire product (e.g. Facebook). As a first step, take a minute and reflect on the communication feature you’re building. Write down a few words on a sheet of paper and keep it in mind as you go through the questions.
+&lt;b&gt;To begin&lt;/b&gt;: Think of a communication feature you’re building. For the purposes of this exercise, narrow your design idea to a single communication feature (e.g. Facebook Messenger) rather than an entire product (e.g. Facebook).
 
 Some examples:
 &lt;ul&gt;
@@ -220,6 +228,7 @@ Some examples:
 &lt;li&gt;A text-only chat service for mobile phones that allows for one-on-one or small group conversations&lt;/li&gt;
 &lt;li&gt;A social media platform that allows users to post photos and videos which disappear after 24 hours&lt;/li&gt;
 &lt;/ul&gt;
+&lt;b&gt;Write down a one-line summary of the feature and keep it in mind as you go through the tool.&lt;/b&gt;
 &lt;p class=&quot;navitem&quot;&gt;[[Okay, let&#39;s get started-&gt;TemporalStructure]]&lt;/p&gt;
 
 &lt;&lt;if $setupComplete is not &quot;true&quot;&gt;&gt;
@@ -232,7 +241,7 @@ Some examples:
 &lt;&lt;set $socialInteractivity = &quot;N/A&quot;&gt;&gt;
 &lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="TemporalStructure" tags="" position="801,541" size="100,100">&lt;b&gt;Temporal Structure&lt;/b&gt;
 
-&lt;img src=&quot;https://www.dropbox.com/s/wcdnrlmsu44f3h9/clock.svg?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt; Temporal structure refers to how synchronous or asynchronous the communication between users is. Synchronous communication occurs in real-time (e.g., a video call), whereas asynchronous communication involves a delay between one party’s emission and another’s reception (e.g., email when the receiver is away from their email client).
+&lt;img src=&quot;https://www.dropbox.com/s/wcdnrlmsu44f3h9/clock.svg?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt; Temporal structure refers to how synchronous or asynchronous the communication between users is. Synchronous communication occurs in real-time (e.g., a video call), whereas asynchronous communication involves a delay between one party’s contribution and another’s reception (e.g., email when the receiver is away from their email client).
 
 Choose the temporal structure that best describes your feature:
 &lt;ul&gt;
@@ -487,7 +496,7 @@ How easy is it to read and share social/relational/body cues with this feature?
 &lt;td&gt;Sparse social cues can lead to &lt;b&gt;disinhibition&lt;/b&gt;. Disinhibition can be positive--it can encourage honesty and self-disclosure. It can also lead to bullying or abuse. Ensure your users know the social norms and expectations for behavior and how to report abuse.&lt;/td&gt;&lt;/tr&gt;
 
 &lt;tr&gt;&lt;td&gt;&lt;img src=&quot;https://www.dropbox.com/s/sqpothkeau8h8co/red_light.png?raw=1&quot; width=&quot;100&quot; align=&quot;left&quot; hspace=&quot;30&quot; vspace=&quot;30&quot; title=&quot;Red Light - Warnings&quot;&gt;&lt;/td&gt; 
-&lt;td&gt;Social cues help people understand a shared context, often leading to higher feelings of intimacy. &lt;b&gt;How will your users understand their shard social context with sparse social cues?&lt;/b&gt; Consider how you might build in features like emoticons to communicate social cues.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;td&gt;Social cues help people understand a shared context, often leading to higher feelings of intimacy. &lt;b&gt;How will your users understand their shared social context with sparse social cues?&lt;/b&gt; Consider how you might build in features like emoticons to communicate social cues.&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;p class=&quot;case_study&quot;&gt;Case Study: &lt;a href=&quot;https://www.wired.com/story/guide-emoji/&quot; target=&quot;_blank&quot;&gt;Emoticons are an easy way to add social cues to digital communication. Read more about the history of emoji here.&lt;/a&gt;&lt;/p&gt;
 &lt;p class=&quot;navitem&quot;&gt;[[← Choose a different answer|SocialCues]]&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[[Conclusion →|Conclusion]]&lt;/p&gt;
 /*[[Okay, what&#39;s the last principle to consider?|SocialInteractivity]]*/</tw-passagedata><tw-passagedata pid="29" name="SocialInteractivity" tags="" position="802,2300" size="100,100">&lt;b&gt;Social Interactivity&lt;/b&gt;
@@ -509,6 +518,8 @@ How socially interactive is your feature?
 &lt;img src=&quot;https://www.dropbox.com/s/7sxxxxgl1x8bqxd/light_bulb.svg?raw=1&quot; width=&quot;100&quot; align=&quot;right&quot; hspace=&quot;30&quot; vspace=&quot;30&quot;&gt;&lt;&lt;if $synch is &quot;N/A&quot; or $mobility is &quot;N/A&quot; or $reach is &quot;N/A&quot; or $storage is &quot;N/A&quot; or $replicability is &quot;N/A&quot; or $socialCues is &quot;N/A&quot;&gt;&gt;Please complete every question to see your results. Unanswered questions are listed as &quot;N/A&quot; in the answers to the left.&lt;&lt;else&gt;&gt;
 &lt;div id=&quot;results&quot;&gt;Analyzing a technology along the dimensions described can help reveal inconsistencies of design. Below we provide customized design challenges based on your responses. Computer-mediated communication is complex and these questions are meant to be thought provoking but not provide direct solutions.
 
+One last note: a theme throughout the principles in this tool is “interactivity,” or the intensity of an interaction. Interactivity is on a continuum, not a binary, and one system can provide several types of social interaction with varied levels of intensity. High interactivity in a feature can provide intimate, unfiltered connections, while low interactivity can be helpful for providing things like stable information systems. Interactivity affects (and is affected by) all six principles discussed in this tool.
+
 &lt;img src=&quot;https://www.dropbox.com/s/wcdnrlmsu44f3h9/clock.svg?raw=1&quot; width=&quot;20&quot;&gt; [[Temporal structure|TemporalStructure]]: &lt;&lt;print $synch&gt;&gt;
 &lt;&lt;if $synch is &quot;Synchronous&quot;&gt;&gt;If your product supports more than a couple people, how will you ensure larger groups can communicate effectively? As synchronous communication feels intimate, how will you remind users of their actual degree of privacy?&lt;&lt;elseif $synch is &quot;Asynchronous&quot;&gt;&gt;How will you help your users build norms around response times to avoid both large communication gaps as well as pressure to respond immediately?&lt;&lt;endif&gt;&gt;
 
@@ -527,18 +538,6 @@ How socially interactive is your feature?
 &lt;img src=&quot;https://www.dropbox.com/s/hvgg4lbt68zh1ez/social_cues.svg?raw=1&quot; width=&quot;20&quot;&gt; [[Social cues|SocialCues]]: &lt;&lt;print $socialCues&gt;&gt;
 &lt;&lt;if $socialCues is &quot;High fidelity&quot;&gt;&gt;How will you build in ways for your users to control which social cues are shared?&lt;&lt;elseif $socialCues is &quot;Several&quot;&gt;&gt;How will you build in ways for your users to control which social cues are shared?&lt;&lt;elseif $socialCues is &quot;Limited&quot;&gt;&gt;What features will you add for your users to achieve shared social context with sparse social cues (i.e. emoticons, likes, etc.)?&lt;&lt;else&gt;&gt;&lt;&lt;endif&gt;&gt;&lt;/div&gt;
 &lt;p class=&quot;navitem&quot;&gt;[[← Back to Introduction (choices will be saved)|Introduction]]&lt;/p&gt;
-
-&lt;button onclick=&quot;printCanvas()&quot;&gt;Print&lt;/button&gt;
-&lt;script&gt;
-function printFunction() {
-	window.print();
-}
-
-function printCanvas() {
-	window.open(&#39;&#39;,  document.getElementById(&#39;results&#39;).toDataURL());
-}
-&lt;/script&gt;
-
 &lt;&lt;endif&gt;&gt;
 
 /*&lt;img src=&quot;https://www.dropbox.com/s/ffd1ylgil581s2n/interactivity.svg?raw=1&quot; width=&quot;20&quot;&gt; [[Social interactivity|SocialInteractivity]]: &lt;&lt;print $socialInteractivity&gt;&gt;*/</tw-passagedata></tw-storydata>
